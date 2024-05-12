@@ -1,0 +1,6 @@
+function clfcbf_control_test()
+potential=struct('shape','quadratic','repulsiveWeight',0.1);
+plannerParameters=struct('epsilon',0.8,...
+    'control',@clfcbf_control,...
+    'NSteps',40);
+potential_planner_runPlot(potential,plannerParameters)

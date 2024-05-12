@@ -1,0 +1,6 @@
+function potential_planner_test
+potential=struct('shape','conic','repulsiveWeight',2);
+plannerParameters=struct('epsilon',1e-1,...
+    'control',@(x,w,p) -potential_totalGrad(x,w,p),...
+    'NSteps',1000);
+potential_planner_runPlot(potential,plannerParameters)
